@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/signUpParent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context="com.debadityadey.kenispeaktrainer.SignUpActivity">
+
+    <RelativeLayout
+        android:id="@+id/innerBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="#ffffff"
+        android:elevation="20dp"
+        android:paddingBottom="30dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:paddingTop="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5">
+
+        <TextView
+            android:id="@+id/signuptext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/montserrat"
+            android:text="SIGN UP"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="50sp"
+            android:textStyle="bold" />
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="230dp"
+            android:layout_below="@+id/signuptext"
+            android:layout_marginTop="30dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/signup_name"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/edittext_style"
+                    android:fontFamily="@font/montserrat"
+                    android:hint="NAME"
+                    android:maxLines="1"
+                    android:nextFocusDown="@+id/signup_email"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textColorHint="#8f8888" />
+
+                <EditText
+                    android:id="@+id/signup_email"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/signup_name"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:maxLines="1"
+                    android:background="@drawable/edittext_style"
+                    android:fontFamily="@font/montserrat"
+                    android:hint="E-MAIL"
+                    android:nextFocusDown="@+id/signup_pass"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textColorHint="#8f8888" />
+
+                <EditText
+                    android:id="@+id/signup_pass"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/signup_email"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/edittext_style"
+                    android:fontFamily="@font/montserrat"
+                    android:hint="PASSWORD"
+                    android:inputType="textEmailAddress"
+                    android:nextFocusDown="@+id/signup_confirm_pass"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textColorHint="#8f8888" />
+
+                <EditText
+                    android:id="@+id/signup_confirm_pass"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/signup_pass"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/edittext_style"
+                    android:fontFamily="@font/montserrat"
+                    android:hint="CONFIRM PASSWORD"
+                    android:inputType="textPassword"
+                    android:nextFocusDown="@+id/signup_pri_mob_num"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textColorHint="#8f8888" />
+
+                <EditText
+                    android:id="@+id/signup_pri_mob_num"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/signup_confirm_pass"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/edittext_style"
+                    android:fontFamily="@font/montserrat"
+                    android:hint="PRIMARY MOBILE"
+                    android:inputType="phone"
+                    android:nextFocusDown="@+id/signup_alt_mob_num"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textColorHint="#8f8888" />
+
+                <EditText
+                    android:id="@+id/signup_alt_mob_num"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/signup_pri_mob_num"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/edittext_style"
+                    android:fontFamily="@font/montserrat"
+                    android:hint="ALTERNATE MOBILE"
+                    android:inputType="phone"
+                    android:nextFocusDown="@+id/signup_landline"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textColorHint="#8f8888" />
+
+                <EditText
+                    android:id="@+id/signup_landline"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/signup_alt_mob_num"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/edittext_style"
+                    android:fontFamily="@font/montserrat"
+                    android:hint="LANDLINE"
+                    android:inputType="phone"
+                    android:nextFocusDown="@+id/signup_add_line1"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textColorHint="#8f8888" />
+
+                <EditText
+                    android:id="@+id/signup_add_line1"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/signup_landline"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:maxLines="1"
+                    android:background="@drawable/edittext_style"
+                    android:fontFamily="@font/montserrat"
+                    android:hint="ADDRESS (Line 1)"
+                    android:nextFocusDown="@+id/signup_add_line2"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textColorHint="#8f8888" />
+
+                <EditText
+                    android:id="@+id/signup_add_line2"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/signup_add_line1"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:maxLines="1"
+                    android:background="@drawable/edittext_style"
+                    android:fontFamily="@font/montserrat"
+                    android:hint="ADDRESS (Line 2)"
+                    android:nextFocusDown="@+id/signup_add_line3"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textColorHint="#8f8888" />
+
+                <EditText
+                    android:id="@+id/signup_add_line3"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/signup_add_line2"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:maxLines="1"
+                    android:background="@drawable/edittext_style"
+                    android:fontFamily="@font/montserrat"
+                    android:hint="ADDRESS (Line 3)"
+                    android:nextFocusDown="@+id/signup_city"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textColorHint="#8f8888" />
+
+                <EditText
+                    android:id="@+id/signup_city"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/signup_add_line3"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/edittext_style"
+                    android:fontFamily="@font/montserrat"
+                    android:hint="CITY"
+                    android:maxLines="1"
+                    android:nextFocusDown="@+id/signup_state"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textColorHint="#8f8888" />
+
+                <EditText
+                    android:id="@+id/signup_state"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/signup_city"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/edittext_style"
+                    android:fontFamily="@font/montserrat"
+                    android:hint="STATE"
+                    android:maxLines="1"
+                    android:inputType="textAutoComplete"
+                    android:nextFocusDown="@+id/signup_pincode"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textColorHint="#8f8888" />
+
+                <EditText
+                    android:id="@+id/signup_pincode"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/signup_state"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/edittext_style"
+                    android:fontFamily="@font/montserrat"
+                    android:hint="PINCODE"
+                    android:inputType="number"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textColorHint="#8f8888" />
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/login_button_selector"
+        android:text="SUBMIT"
+        android:textColor="@color/colorPrimaryDark"
+        android:fontFamily="@font/montserrat"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        android:id="@+id/submit"/>
+
+</android.support.constraint.ConstraintLayout>
