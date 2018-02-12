@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/signUpParent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context="com.debadityadey.kenispeaktrainer.TrainerActivityDetailsActivity">
+
+    <RelativeLayout
+        android:id="@+id/header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:elevation="30dp">
+
+        <TextView
+            android:id="@+id/trainerName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/montserrat"
+            android:text="DUMMY"
+            android:textColor="#000000"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/trainerName"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="40dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/montserrat"
+            android:text="Welcome to Keni Speak!" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView_activity_details"
+        android:layout_width="338dp"
+        android:layout_height="339dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:background="#ffffff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header_layout">
+
+
+        <RelativeLayout
+            android:id="@+id/initial_screen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="15dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="15dp">
+
+            <TextView
+                android:id="@+id/date_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:text="DATE"
+                android:textSize="25sp" />
+
+            <EditText
+                android:id="@+id/date_input"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/date_text"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/edittext_style"
+                android:clickable="true"
+                android:fontFamily="@font/montserrat"
+                android:inputType="date"
+                android:textAlignment="center"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/school_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/date_text"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/montserrat"
+                android:text="SCHOOL"
+                android:textSize="25sp" />
+
+            <EditText
+                android:id="@+id/school_input"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:layout_alignBottom="@+id/school_text"
+                android:layout_alignLeft="@+id/date_input"
+                android:layout_alignStart="@+id/date_input"
+                android:layout_below="@+id/date_input"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edittext_style"
+                android:fontFamily="@font/montserrat"
+                android:inputType="textAutoComplete"
+                android:textAlignment="center"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/activity_radio_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/school_text"
+                android:layout_marginTop="8dp">
+
+                <RadioButton
+                    android:id="@+id/holiday_radio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="HOLIDAY" />
+
+                <RadioButton
+                    android:id="@+id/leave_radio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="LEAVE" />
+
+                <RadioButton
+                    android:id="@+id/sessions_radio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="SESSION" />
+
+            </RadioGroup>
+
+            <RelativeLayout
+                android:id="@+id/holiday_frag"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/activity_radio_group"
+                android:visibility="invisible">
+
+                <TextView
+                    android:id="@+id/holiday_reason_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat"
+                    android:text="REASON"
+                    android:textSize="25sp" />
+
+                <EditText
+                    android:id="@+id/holiday_reason_input"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="10sp"
+                    android:layout_alignBottom="@+id/holiday_reason_text"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/edittext_style"
+                    android:inputType="text" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:id="@+id/nextHoliday"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/holiday_reason_input"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/login_button_selector"
+                    android:backgroundTint="@color/colorPrimaryDark"
+                    android:fontFamily="@font/montserrat"
+                    android:text="NEXT"
+                    android:textColor="#ffffff"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/leave_frag"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/activity_radio_group"
+                android:visibility="invisible">
+
+                <TextView
+                    android:id="@+id/leave_reason_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat"
+                    android:text="REASON"
+                    android:textSize="25sp" />
+
+                <EditText
+                    android:id="@+id/leave_reason_input"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/leave_reason_text"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/edittext_style"
+                    android:textSize="10sp"
+                    android:inputType="text" />
+
+                <Button
+                    android:id="@+id/nextLeave"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/leave_reason_input"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/login_button_selector"
+                    android:backgroundTint="@color/colorPrimaryDark"
+                    android:fontFamily="@font/montserrat"
+                    android:text="NEXT"
+                    android:textColor="#ffffff"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/sessions_frag"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/activity_radio_group"
+                android:visibility="invisible">
+
+                <TextView
+                    android:id="@+id/number_of_sessions_text"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat"
+                    android:text="Num of Sessions"
+                    android:textSize="25sp" />
+
+                <EditText
+                    android:id="@+id/number_of_sessions_input"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/number_of_sessions_text"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:textSize="10sp"
+                    android:maxLines="1"
+                    android:background="@drawable/edittext_style"
+                    android:inputType="text" />
+
+                <Button
+                    android:id="@+id/nextSession"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/number_of_sessions_input"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/login_button_selector"
+                    android:backgroundTint="@color/colorPrimaryDark"
+                    android:fontFamily="@font/montserrat"
+                    android:text="NEXT"
+                    android:textColor="#ffffff"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <DatePicker
+                android:id="@+id/datePicker_activity"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="invisible"
+                android:backgroundTint="@color/colorPrimaryDark"/>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

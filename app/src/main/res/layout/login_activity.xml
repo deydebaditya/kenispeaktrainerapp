@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/signUpParent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context="com.debadityadey.kenispeaktrainer.LoginActivity">
+
+    <RelativeLayout
+        android:id="@+id/innerBoxLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="#ffffff"
+        android:elevation="20dp"
+        android:paddingBottom="30dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:paddingTop="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5">
+
+        <TextView
+            android:id="@+id/logintext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/montserrat"
+            android:text="LOGIN"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="50sp"
+            android:textStyle="bold" />
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_below="@+id/logintext"
+            android:layout_marginTop="30dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/login_mob"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/edittext_style"
+                    android:fontFamily="@font/montserrat"
+                    android:hint="MOBILE NUM"
+                    android:maxLines="1"
+                    android:nextFocusDown="@+id/login_pass"
+                    android:textAlignment="center"
+                    android:inputType="phone"
+                    android:textColor="#000000"
+                    android:textColorHint="#8f8888" />
+
+                <EditText
+                    android:id="@+id/login_pass"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/login_mob"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:maxLines="1"
+                    android:background="@drawable/edittext_style"
+                    android:fontFamily="@font/montserrat"
+                    android:hint="PASSWORD"
+                    android:nextFocusDown="@+id/login_pass"
+                    android:inputType="textPassword"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textColorHint="#8f8888" />
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/login_button_selector"
+        android:text="LOGIN"
+        android:textColor="@color/colorPrimaryDark"
+        android:fontFamily="@font/montserrat"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        android:id="@+id/loginBut"/>
+
+</android.support.constraint.ConstraintLayout>

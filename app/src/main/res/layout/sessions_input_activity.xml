@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/signUpParent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context="com.debadityadey.kenispeaktrainer.SessionsInputActivity">
+
+    <RelativeLayout
+        android:id="@+id/header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:elevation="30dp">
+
+        <TextView
+            android:id="@+id/trainerName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/montserrat"
+            android:text="DUMMY"
+            android:textColor="#000000"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/trainerName"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="40dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/montserrat"
+            android:text="Welcome to Keni Speak!" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView_activity_details"
+        android:layout_width="338dp"
+        android:layout_height="339dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:background="#ffffff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header_layout">
+
+
+        <RelativeLayout
+            android:id="@+id/initial_screen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="15dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="15dp">
+
+            <TextView
+                android:id="@+id/class_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:text="CLASS"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/class_input"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/class_text"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/edittext_style"
+                android:clickable="true"
+                android:fontFamily="@font/montserrat"
+                android:inputType="date"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SECTION"
+                android:fontFamily="@font/montserrat"
+                android:textSize="20sp"
+                android:layout_below="@+id/class_text"
+                android:layout_marginTop="8dp"
+                android:id="@+id/section_text"/>
+
+            <EditText
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:fontFamily="@font/montserrat"
+                android:textSize="20sp"
+                android:layout_below="@+id/class_input"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edittext_style"
+                android:layout_alignBottom="@+id/section_text"
+                android:id="@+id/section_input"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Activity No."
+                android:fontFamily="@font/montserrat"
+                android:textSize="20sp"
+                android:layout_below="@+id/section_text"
+                android:layout_marginTop="8dp"
+                android:id="@+id/activity_num_text"/>
+
+            <EditText
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:fontFamily="@font/montserrat"
+                android:textSize="20sp"
+                android:layout_below="@+id/section_input"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edittext_style"
+                android:layout_alignBottom="@+id/activity_num_text"
+                android:id="@+id/activity_num_input"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Session No."
+                android:fontFamily="@font/montserrat"
+                android:textSize="20sp"
+                android:layout_below="@+id/activity_num_text"
+                android:layout_marginTop="8dp"
+                android:id="@+id/session_num_text"/>
+
+            <EditText
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:fontFamily="@font/montserrat"
+                android:textSize="20sp"
+                android:layout_below="@+id/activity_num_input"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edittext_style"
+                android:layout_alignBottom="@+id/session_num_text"
+                android:id="@+id/session_num_input"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Brief of Activity"
+                android:fontFamily="@font/montserrat"
+                android:textSize="20sp"
+                android:layout_below="@+id/session_num_text"
+                android:layout_marginTop="8dp"
+                android:id="@+id/brief_text"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:fontFamily="@font/montserrat"
+                android:textSize="20sp"
+                android:layout_below="@+id/brief_text"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edittext_style"
+                android:id="@+id/brief_input"/>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/login_button_selector"
+        android:fontFamily="@font/montserrat"
+        android:text="NEXT"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
